@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    user-select: none;
+}
+
+/*Code*/
+main{
+    background-color: black;
+}
+#back{
+    background: url(img/MS.jpg) -190px center no-repeat;
+    background-size: cover;
+    animation: back 5s both;
+    height: 100vh;
+    position: relative;
+}
+#pos{
+    height: 100vh;
+    width: 100vw;
+    transform: translateY(-100%);
+    position: absolute;
+}
+#cont{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#cont > div:not(#sit){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 70px;
+    font-family: 'Audiowide', cursive;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Cinzel', serif;
+}
+h1,
+h2{
+    filter:drop-shadow(0.1px 0.1px 5px rgb(245, 119, 119));
+}
+#sit{
+    display: flex;
+}
+.site a{
+    margin:10px;
+}
+.site i{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    font-size: 35px;
+}
+.site{
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+    border-radius: 30px;
+    filter:drop-shadow(0.1px 0.1px 5px rgb(245, 119, 119));
+}
+
+.site:hover{
+    animation: borda 1s forwards;
+    animation-fill-mode: forwards;
+
+}
+button{
+    background: none;
+    border: none;
+}
+
+/*Animate*/
+@-webkit-keyframes back{
+    0%{ 
+        filter: grayscale(0%) blur(4px) brightness(0);
+    }
+    50%{ 
+        filter: grayscale(0%) blur(8px) brightness(0.2);
+    }
+    100%{
+        
+        filter: grayscale(80%) blur(10px) brightness(0.3);
+    }
+}
+
+@-webkit-keyframes borda{
+    0%{
+        border: 2px solid rgba(0, 0, 0, 0);
+    }
+    100%{
+        border: 2px solid white;
+    }
+}
