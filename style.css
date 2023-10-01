@@ -71,13 +71,14 @@ h2{
     width: 55px;
     height: 55px;
     margin: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition:border 1s;
     border-radius: 30px;
     filter:drop-shadow(0.1px 0.1px 5px rgb(245, 119, 119));
 }
 
 .site:hover{
-    animation: borda 1s forwards;
-    animation-fill-mode: forwards;
+    border: 2px solid white;
 
 }
 button{
@@ -99,11 +100,16 @@ button{
     }
 }
 
-@-webkit-keyframes borda{
-    0%{
-        border: 2px solid rgba(0, 0, 0, 0);
+@media (max-width: 600px) {
+    #sit{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
     }
-    100%{
-        border: 2px solid white;
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
     }
 }
