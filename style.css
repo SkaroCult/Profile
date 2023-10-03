@@ -13,11 +13,6 @@
 }
 
 /*Code*/
-body{
-    overflow-y: hidden;
-    overflow-x: hidden;
-
-}
 main{
     background-color: black;
     display: flex;
