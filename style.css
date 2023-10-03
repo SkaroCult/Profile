@@ -13,8 +13,18 @@
 }
 
 /*Code*/
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
 main{
     background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+main:last-child{
+    align-items: center;
 }
 #back{
     background: url(img/MS.jpg) -190px center no-repeat;
